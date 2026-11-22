@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shruti Panda | Computer Engineering Student</title>
+<meta name="description" content="Portfolio of Shruti Panda, Computer Engineering student focused on front-end development and UI/UX design.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<!-- To finish: add resume.pdf next to this file, and add your GitHub link in the hero buttons if you want one. -->
+<style>
+  :root{
+    --paper:#F2F5F4; --ink:#10231F; --muted:#51655F; --line:#CBD6D2;
+    --accent:#0E5A4B; --accent-ink:#FFFFFF; --tag:#E1EAE7;
+    --display:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;
+    --body:"Instrument Sans","Segoe UI",system-ui,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6}
+  a{color:inherit}
+  :focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+  .wrap{max-width:860px;margin:0 auto;padding:0 24px}
+  header.top{padding:20px 0;border-bottom:1px solid var(--line)}
+  header.top .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+  .brand{font-family:var(--display);font-weight:700;text-decoration:none}
+  nav a{margin-left:20px;text-decoration:none;color:var(--muted);font-size:15px}
+  nav a:hover{color:var(--ink);text-decoration:underline}
+
+  .hero{padding:72px 0 56px}
+  .hero h1{font-family:var(--display);font-weight:700;font-size:clamp(48px,11vw,104px);line-height:.95;letter-spacing:-.03em;margin:0 0 24px}
+  .hero p.lead{font-size:clamp(19px,2.4vw,23px);max-width:34em;margin:0 0 32px;color:var(--muted)}
+  .hero p.lead strong{color:var(--ink);font-weight:600}
+  .actions{display:flex;gap:12px;flex-wrap:wrap}
+  .btn{display:inline-block;padding:12px 20px;border-radius:999px;border:1.5px solid var(--ink);text-decoration:none;font-weight:600;font-size:15px}
+  .btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+  .btn:hover{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+  .status{margin-top:40px;padding:14px 18px;border-left:4px solid var(--accent);background:var(--tag);max-width:34em;font-size:15px}
+
+  section{padding:56px 0;border-top:1px solid var(--line)}
+  h2{font-family:var(--display);font-size:clamp(28px,4vw,38px);letter-spacing:-.02em;margin:0 0 28px;line-height:1.1}
+
+  .project{display:grid;gap:10px;padding:26px 0;border-bottom:1px solid var(--line)}
+  .project:first-of-type{padding-top:0}
+  .project:last-of-type{border-bottom:0;padding-bottom:0}
+  .project h3{font-family:var(--display);font-size:23px;margin:0}
+  .project ul.points{margin:0;padding-left:20px;max-width:42em}
+  .project ul.points li{margin-bottom:6px}
+  .role{color:var(--muted);font-size:15px;margin:0}
+  .tags{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:4px 0 0}
+  .tags li{background:var(--tag);padding:3px 12px;border-radius:999px;font-size:14px}
+
+  .job{padding:0 0 28px}
+  .job:last-child{padding-bottom:0}
+  .job h3{font-family:var(--display);font-size:22px;margin:0}
+  .job .meta{color:var(--muted);font-size:15px;margin:2px 0 12px}
+  .job ul{margin:0;padding-left:20px;max-width:42em}
+  .job li{margin-bottom:6px}
+
+  .skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:28px}
+  .skills h3{font-size:16px;margin:0 0 10px;font-family:var(--display)}
+  .skills ul,.cert ul{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:8px}
+  .skills li{background:var(--tag);padding:3px 12px;border-radius:999px;font-size:14px}
+
+  .edu-item{margin-bottom:18px}
+  .edu-item:last-child{margin-bottom:0}
+  .edu-item p{margin:0}
+  .meta{color:var(--muted);font-size:15px}
+
+  .cert-item{margin-bottom:16px;max-width:42em}
+  .cert-item p{margin:0}
+  .interests{margin-top:32px;max-width:42em}
+  .interests h3{font-family:var(--display);font-size:18px;margin:0 0 8px}
+  .interests p{margin:0;color:var(--muted)}
+
+  .contact p{max-width:34em;margin:0 0 24px}
+  footer{padding:28px 0 40px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+
+  @media (max-width:560px){nav a{margin-left:14px}.hero{padding-top:48px}}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top">Shruti Panda</a>
+    <nav aria-label="Sections">
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap">
+
+    <div class="hero">
+      <h1>Shruti Panda</h1>
+      <p class="lead"><strong>Computer Engineering student</strong> who enjoys front-end development and user-centric design. I design in Figma, build with web and Android tools, and have completed four internships. I’m looking for my first professional role in software.</p>
+      <div class="actions">
+        <a class="btn primary" href="resume.pdf" download>Download resume</a>
+        <a class="btn" href="https://linkedin.com/in/gecdhd-comp-shruti-panda">LinkedIn</a>
+        <a class="btn" href="mailto:shrutipanda43@gmail.com">Email me</a>
+      </div>
+      <p class="status">B.E. Computer Engineering at Government Engineering College, Dahod. Based in Surat, Gujarat.</p>
+    </div>
+
+    <section id="projects">
+      <h2>Projects</h2>
+
+      <article class="project">
+        <h3>Salon Management System</h3>
+        <p class="role">Team leader &middot; Academic team project</p>
+        <ul class="points">
+          <li>Led a student team to build a full-stack system for handling salon customer bookings and orders.</li>
+          <li>Built the booking interface with HTML, CSS, and PHP, and designed the MySQL database for customer records, bookings, and order history.</li>
+          <li>Assigned tasks, tracked timelines, and tested and debugged the system for reliable order processing.</li>
+        </ul>
+        <ul class="tags"><li>PHP</li><li>MySQL</li><li>XAMPP</li><li>HTML</li><li>CSS</li></ul>
+      </article>
+
+      <article class="project">
+        <h3>Roadside Rescue</h3>
+        <p class="role">Designer and developer &middot; Design Engineering project</p>
+        <ul class="points">
+          <li>Designed and built a mobile app that connects drivers with on-demand roadside help during a vehicle breakdown.</li>
+          <li>Created wireframes and mockups in Figma and Canva for a quick interface that works in urgent situations.</li>
+          <li>Turned the design into a working prototype with Android and Java, and refined it after identifying user pain points.</li>
+        </ul>
+        <ul class="tags"><li>Android</li><li>Java</li><li>Figma</li><li>Canva</li></ul>
+      </article>
+    </section>
+
+    <section id="experience">
+      <h2>Experience</h2>
+
+      <div class="job">
+        <h3>Intern, Active Servers</h3>
+        <p class="meta">Dahod, Gujarat &middot; July 2026 &middot; 15 days &middot; Website hosting</p>
+        <ul>
+          <li>Learned web hosting fundamentals: domain configuration, server management, and deploying websites to live environments.</li>
+          <li>Helped troubleshoot hosting issues and set up client websites with the team.</li>
+          <li>Saw how front-end and back-end parts work together on live hosting infrastructure.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <h3>Intern, Core Infotech</h3>
+        <p class="meta">Surat, Gujarat &middot; Aug to Sep 2023 &middot; 30 days</p>
+        <ul>
+          <li>Worked with the technical team on ongoing projects and learned the software development lifecycle.</li>
+          <li>Applied my programming and problem-solving knowledge in a professional setting.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <h3>Intern, Hybrid Technology</h3>
+        <p class="meta">Surat, Gujarat &middot; Jan 2023 &middot; 15 days</p>
+        <ul>
+          <li>Assisted the development team with assigned tasks on project components, under senior guidance.</li>
+          <li>Practised teamwork, technical documentation, and structured development processes.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="skills">
+        <div><h3>Programming</h3><ul><li>C</li><li>C++</li><li>Java</li><li>JavaScript</li><li>PHP</li></ul></div>
+        <div><h3>Web and mobile</h3><ul><li>HTML</li><li>CSS</li><li>Bootstrap</li><li>Android</li></ul></div>
+        <div><h3>Data</h3><ul><li>MySQL</li><li>Basic SQL</li><li>Data structures</li></ul></div>
+        <div><h3>Design</h3><ul><li>Figma</li><li>Canva</li><li>Adobe Photoshop</li></ul></div>
+        <div><h3>Tools</h3><ul><li>Git and GitHub</li><li>XAMPP</li><li>MS Office and Excel</li></ul></div>
+        <div><h3>Languages</h3><ul><li>English</li><li>Hindi</li><li>Gujarati</li></ul></div>
+      </div>
+    </section>
+
+    <section id="education">
+      <h2>Education and certifications</h2>
+
+      <div class="edu-item">
+        <p><strong>B.E. in Computer Engineering</strong></p>
+        <p class="meta">Government Engineering College, Dahod &middot; Aug 2024 to 2027 (expected)</p>
+      </div>
+      <div class="edu-item">
+        <p><strong>Diploma in Engineering</strong></p>
+        <p class="meta">Government Polytechnic for Girls, Surat &middot; 2024 &middot; CGPA 7.86 / 10</p>
+      </div>
+      <div class="edu-item">
+        <p><strong>Secondary School Certificate (SSC), Gujarat Board</strong></p>
+        <p class="meta">Smt. I.J. Davle Memorial Excelsior Academy, Surat &middot; 2021 &middot; 81.52%</p>
+      </div>
+
+      <div class="interests">
+        <div class="cert-item">
+          <p><strong>Machine Learning and Applied AI Internship</strong></p>
+          <p class="meta">AICTE and IBM SkillsBuild (via BharatCares) &middot; Sep 2026</p>
+        </div>
+        <div class="cert-item">
+          <p><strong>Foundation Course in Green Skills and Artificial Intelligence</strong></p>
+          <p class="meta">Edunet Foundation, AICTE and Shell &middot; Jan 2026</p>
+        </div>
+      </div>
+
+      <div class="interests">
+        <h3>Interested in</h3>
+        <p>Web development, UI/UX design, app development, database management, digital marketing, and business management. Outside class I take part in cultural events, university sports, the technical fest, and event volunteering.</p>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Contact</h2>
+      <p>I’m looking for an internship or an entry-level role in software, front-end, or UI/UX. Email is the fastest way to reach me.</p>
+      <div class="actions">
+        <a class="btn primary" href="mailto:shrutipanda43@gmail.com">shrutipanda43@gmail.com</a>
+        <a class="btn" href="https://linkedin.com/in/gecdhd-comp-shruti-panda">LinkedIn</a>
+        <a class="btn" href="resume.pdf" download>Download resume</a>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">Shruti Panda &middot; Surat, Gujarat</div>
+</footer>
+
+</body>
+</html>
